@@ -41,8 +41,11 @@ load_dotenv()
 
 
 # Configuration
-CHROMADB_HOST = os.getenv("CHROMADB_HOST", "localhost")
-CHROMADB_PORT = int(os.getenv("CHROMADB_PORT", "8008"))
+CHROMADB_HOST = os.getenv("CHROMADB_HOST", "api.trychroma.com")
+CHROMADB_PORT = int(os.getenv("CHROMADB_PORT", "8000"))
+CHROMA_API_KEY = os.getenv("CHROMA_API_KEY")
+CHROMA_TENANT = os.getenv("CHROMA_TENANT")
+CHROMA_DATABASE = os.getenv("CHROMA_DATABASE", "default_database")
 COLLECTION_NAME = "medical_knowledge"
 SOURCES_DIR = Path(__file__).parent / "sources"
 CHUNK_SIZE = 512
@@ -90,21 +93,21 @@ def split_documents(documents: list[Document]) -> list[Document]:
 
 
 def get_chroma_client():
-    """Get ChromaDB HTTP client (connects to running ChromaDB container)"""
     try:
         client = chromadb.HttpClient(
+            ssl=True,
             host=CHROMADB_HOST,
-            port=CHROMADB_PORT
+            port=443,
+            headers={"x-chroma-token": CHROMA_API_KEY},
+            tenant=CHROMA_TENANT,
+            database=CHROMA_DATABASE,
         )
-        # Test connection
         client.heartbeat()
-        logger.info(f"  ✔  Connected to ChromaDB at {CHROMADB_HOST}:{CHROMADB_PORT}")
+        logger.info(f"  ✔  Connected to Chroma Cloud")
         return client
     except Exception as e:
-        logger.error(f"  ✘   ChromaDB connection failed: {e}")
-        logger.error(f"   Make sure ChromaDB is running: docker-compose up chromadb")
+        logger.error(f"  ✘  ChromaDB connection failed: {e}")
         sys.exit(1)
-
 
 def ingest_documents(chunks: list[Document], client: chromadb.ClientAPI):
     """Embed chunks and store in ChromaDB"""
