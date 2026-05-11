@@ -230,10 +230,15 @@ class DiagnosisRAG:
         self._initialized = False
 
     def initialize(self):
-        chromadb_host = os.getenv("CHROMADB_HOST", "localhost")
-        chromadb_port = int(os.getenv("CHROMADB_PORT", "8008"))
+        CHROMA_API_KEY = os.getenv("CHROMA_API_KEY")
+        CHROMA_TENANT = os.getenv("CHROMA_TENANT")
+        CHROMA_DATABASE = os.getenv("CHROMA_DATABASE")
 
-        client = chromadb.HttpClient(host=chromadb_host, port=chromadb_port)
+        client = chromadb.CloudClient(
+            api_key=CHROMA_API_KEY,
+            tenant=CHROMA_TENANT,
+            database=CHROMA_DATABASE,
+        )
         embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
         self._vectorstore = Chroma(
