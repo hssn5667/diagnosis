@@ -93,12 +93,13 @@ def split_documents(documents: list[Document]) -> list[Document]:
 
 
 def get_chroma_client():
+
+    logger.info(f"  CHROMA_API_KEY present: {bool(CHROMA_API_KEY)}, length: {len(CHROMA_API_KEY) if CHROMA_API_KEY else 0}")
+    logger.info(f"  CHROMA_TENANT: {CHROMA_TENANT}")
+    logger.info(f"  CHROMA_DATABASE: {CHROMA_DATABASE}")
     try:
-        client = chromadb.HttpClient(
-            ssl=True,
-            host="api.trychroma.com",
-            port=443,
-            headers={"Authorization": f"Bearer {CHROMA_API_KEY}"},
+        client = chromadb.CloudClient(
+            api_key=CHROMA_API_KEY,
             tenant=CHROMA_TENANT,
             database=CHROMA_DATABASE,
         )
