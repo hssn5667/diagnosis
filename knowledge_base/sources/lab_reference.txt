@@ -1,0 +1,147 @@
+CLINICAL REFERENCE: Laboratory Values and Clinical Interpretation
+
+COMPLETE BLOOD COUNT (CBC) INTERPRETATION
+==========================================
+
+WHITE BLOOD CELL COUNT (WBC) — LOINC 26464-8
+Normal adult range: 4.5 - 11.0 x10^3/uL
+Pediatric range: 5.0 - 15.0 x10^3/uL
+
+Elevated WBC (Leukocytosis):
+- WBC 11.0-15.0: Mild leukocytosis — infection, stress, inflammation, corticosteroids
+- WBC 15.0-20.0: Moderate leukocytosis — bacterial infection (pneumonia, UTI), severe stress
+- WBC > 20.0: Severe leukocytosis — serious bacterial infection, sepsis, leukemia
+- WBC > 30.0 (CRITICAL): Sepsis, leukemia, leukemoid reaction — urgent evaluation required
+
+Low WBC (Leukopenia):
+- WBC < 4.0: Viral infection, bone marrow suppression, autoimmune disease
+- WBC < 2.0 (CRITICAL): Severe immunosuppression, aplastic anemia
+
+Clinical significance in infection:
+- Bacterial infections: typically WBC > 12.0 with neutrophilia
+- Viral infections: typically WBC normal or low with lymphocytosis
+- Sepsis: WBC > 12.0 OR < 4.0 (both extremes are SIRS criteria)
+
+NEUTROPHIL PERCENTAGE — LOINC 770-8
+Normal: 50-70% of WBC differential
+- Neutrophilia (>75%): bacterial infection, stress, corticosteroids
+- Neutropenia (<40%): viral infection, bone marrow suppression
+- Left shift (bands >10%): early/active bacterial infection, severe stress
+
+HEMOGLOBIN — LOINC 718-7
+Normal: Male 13.5-17.5 g/dL, Female 12.0-15.5 g/dL
+- Mild anemia: Male < 13.5, Female < 12.0
+- Critical low: < 7.0 g/dL — transfusion consideration
+- Elevated (polycythemia): dehydration, lung disease, high altitude, polycythemia vera
+
+PLATELET COUNT — LOINC 777-3
+Normal: 150,000 - 400,000/uL (150-400 x10^3/uL)
+- Thrombocytopenia < 150: ITP, liver disease, DIC, medications
+- Critical < 50: serious bleeding risk
+- Critical < 20: spontaneous bleeding risk, platelet transfusion
+- Thrombocytosis > 400: infection, inflammation, iron deficiency, reactive
+
+METABOLIC PANEL INTERPRETATION
+================================
+
+CREATININE — LOINC 2160-0
+Normal: Male 0.7-1.3 mg/dL, Female 0.5-1.1 mg/dL
+- Elevated: acute kidney injury (AKI), chronic kidney disease (CKD), dehydration, medications
+- Creatinine > 2.0: significant renal impairment, adjust medication dosing
+- Creatinine > 4.0 (CRITICAL): severe renal failure — urgent nephrology consult
+- Creatinine doubling from baseline = AKI Stage 1 (KDIGO criteria)
+
+Clinical significance:
+- Creatinine elevation in pneumonia: may indicate sepsis-induced AKI
+- Important for medication dosing (fluoroquinolones, aminoglycosides)
+- Metformin contraindicated if creatinine > 1.5 mg/dL (male) or > 1.4 mg/dL (female)
+
+GLUCOSE — LOINC 2345-7
+Normal fasting: 70-100 mg/dL
+Normal random: 70-140 mg/dL
+- Hypoglycemia < 70: diabetes medication, liver disease, sepsis
+- Critical hypoglycemia < 50: immediate treatment required
+- Diabetes range fasting: > 126 mg/dL
+- Hyperglycemia > 180: poor diabetes control, stress response, infection
+- Critical hyperglycemia > 400: diabetic ketoacidosis (DKA), hyperosmolar state
+
+POTASSIUM — LOINC 2823-3
+Normal: 3.5-5.0 mEq/L
+- Hypokalemia < 3.5: diuretics, vomiting, poor intake, diarrhea
+- Critical hypokalemia < 2.5: cardiac arrhythmia risk, muscle weakness
+- Hyperkalemia > 5.0: renal failure, ACE inhibitors, K-sparing diuretics
+- Critical hyperkalemia > 6.0: cardiac emergency, peaked T waves on EKG
+
+ALBUMIN — LOINC 1751-7
+Normal: 3.5-5.0 g/dL
+- Low albumin < 3.5: malnutrition, liver disease, inflammation, protein loss
+- Low albumin < 2.0: severe malnutrition, ascites, critical illness
+- Significance: affects drug binding, oncotic pressure, indicates chronic illness
+
+LIVER FUNCTION TESTS
+=====================
+
+ALT (Alanine Aminotransferase) — LOINC 1742-6
+Normal: 7-56 U/L (male), 7-45 U/L (female)
+- Mildly elevated (1-3x ULN): fatty liver, alcohol, medications
+- Moderately elevated (3-10x ULN): hepatitis, ischemic hepatitis
+- Severely elevated (>10x ULN): acute hepatitis, hepatic necrosis
+- Elevated ALT in setting of antibiotic use: consider drug-induced liver injury (DILI)
+
+INFLAMMATORY MARKERS
+=====================
+
+C-REACTIVE PROTEIN (CRP) — LOINC 1988-5
+Normal: < 10 mg/L (high sensitivity CRP < 3 mg/L)
+- Mildly elevated 10-40 mg/L: viral infection, mild bacterial infection
+- Moderately elevated 40-100 mg/L: bacterial infection, autoimmune disease
+- Severely elevated > 100 mg/L: serious bacterial infection, sepsis
+- CRP > 200 mg/L: strongly suggests serious bacterial infection
+
+Significance in pneumonia:
+- CRP > 100 mg/L combined with fever and WBC elevation: > 90% sensitivity for bacterial pneumonia
+- Falling CRP: good response to treatment
+- Rising CRP despite treatment: treatment failure, consider resistant organism or complication
+
+CARDIAC MARKERS
+===============
+
+TROPONIN T — LOINC 6598-7
+Normal: < 0.01 ng/mL (high-sensitivity troponin T varies by assay)
+- Elevated troponin: myocardial injury (AMI, demand ischemia, myocarditis, PE)
+- Troponin elevation in sepsis/pneumonia: demand ischemia, septic cardiomyopathy
+- Serial troponins: rise-and-fall pattern suggests acute MI (ACS)
+- Elevated without rise-and-fall: chronic demand ischemia, CKD, HF
+
+LABORATORY PATTERNS AND CLINICAL SYNDROMES
+============================================
+
+BACTERIAL PNEUMONIA PATTERN:
+- WBC > 12.0 x10^3/uL (often 15-20 in lobar pneumonia)
+- Neutrophilia > 80%
+- CRP > 50 mg/L (often > 100)
+- Combined WBC + CRP elevation: sensitivity ~89% for bacterial pneumonia
+
+SEPSIS PATTERN (qSOFA/SIRS criteria):
+- WBC > 12 or < 4 x10^3/uL
+- Temperature > 38°C or < 36°C
+- Heart rate > 90 bpm
+- Respiratory rate > 20 breaths/min
+Sepsis = infection + ≥2 SIRS criteria
+Severe sepsis = sepsis + organ dysfunction
+Septic shock = severe sepsis + hypotension despite fluid resuscitation
+
+ACUTE KIDNEY INJURY (AKI) PATTERN (in context of infection):
+- Creatinine rise > 0.3 mg/dL within 48 hours
+- Creatinine > 1.5x baseline within 7 days
+- Urine output < 0.5 mL/kg/hr for 6+ hours
+- In pneumonia + sepsis: AKI suggests sepsis-induced organ dysfunction
+
+ICD-10 CODES FOR LAB-ASSOCIATED CONDITIONS:
+J18.9 - Pneumonia (associated: WBC elevation, CRP elevation)
+A41.9 - Sepsis (associated: WBC abnormality, organ dysfunction labs)
+N17.9 - Acute kidney injury (associated: creatinine elevation)
+I21.9 - Acute MI (associated: troponin elevation)
+E11.9 - Type 2 diabetes (associated: elevated glucose)
+K74.6 - Liver cirrhosis (associated: low albumin, elevated bilirubin)
+D64.9 - Anemia, unspecified (associated: low hemoglobin)

@@ -1,0 +1,137 @@
+CLINICAL REFERENCE: Differential Diagnosis Guide
+
+RESPIRATORY SYMPTOMS DIFFERENTIAL DIAGNOSIS
+=============================================
+
+CHIEF COMPLAINT: Fever + Cough + Dyspnea (Acute)
+--------------------------------------------------
+Primary considerations:
+1. Community-acquired pneumonia (CAP) — ICD-10: J18.9
+   Key features: Productive cough, fever > 38°C, lobar consolidation on CXR, WBC elevated
+   
+2. Acute bronchitis — ICD-10: J20.9
+   Key features: Cough (with or without sputum), usually afebrile or low-grade fever
+   Labs: WBC normal or mildly elevated, CXR normal
+   
+3. Viral upper respiratory tract infection (URI) — ICD-10: J06.9
+   Key features: Rhinorrhea, sore throat, myalgia, usually low-grade fever
+   Labs: WBC normal or low with lymphocytosis
+   
+4. Influenza — ICD-10: J11.1
+   Key features: Abrupt onset, high fever, myalgias, headache, dry cough
+   Labs: WBC normal or leukopenia, rapid flu test
+   
+5. COVID-19 pneumonia — ICD-10: U07.1
+   Key features: Fever, cough, loss of taste/smell, bilateral infiltrates
+   Labs: Lymphopenia, elevated D-dimer, elevated CRP
+   
+6. Pulmonary embolism (PE) — ICD-10: I26.9
+   Key features: Pleuritic chest pain, dyspnea, tachycardia, recent immobility
+   Labs: Elevated D-dimer, ABG showing hypoxemia, CXR may show Hampton's hump
+   
+7. Congestive heart failure (CHF) with pulmonary edema — ICD-10: I50.9
+   Key features: Orthopnea, bilateral crackles, elevated JVP, edema
+   Labs: Elevated BNP/NT-proBNP, CXR showing bilateral infiltrates + cardiomegaly
+   
+8. COPD exacerbation — ICD-10: J44.1
+   Key features: Known COPD history, increased dyspnea, change in sputum
+   
+9. Lung abscess — ICD-10: J85.2
+   Key features: Foul-smelling sputum, prolonged fever, risk factors (aspiration, dental disease)
+   
+10. Tuberculosis (TB) — ICD-10: A15.0
+    Key features: Night sweats, weight loss, hemoptysis, upper lobe cavitation, exposure history
+
+DIFFERENTIATING BACTERIAL vs VIRAL PNEUMONIA:
+Bacterial (more likely):
+- Sudden onset, high fever > 39°C
+- Productive purulent sputum
+- WBC > 15.0 with neutrophilia
+- CRP > 100 mg/L
+- Lobar consolidation on CXR
+- Responds to antibiotics in 24-48 hours
+
+Viral (more likely):
+- Gradual onset, myalgias, malaise
+- Dry or scant cough
+- WBC normal or leukopenia
+- Bilateral interstitial infiltrates on CXR
+- Does not respond to antibiotics
+- May have lymphocytosis
+
+CHEST PAIN DIFFERENTIAL
+========================
+1. Pleuritis — ICD-10: R07.1 (pleuritic pain, worse with inspiration)
+2. Musculoskeletal — ICD-10: M79.3 (reproducible with palpation)
+3. Pericarditis — ICD-10: I30.9 (positional, pleuritic, friction rub)
+4. Acute coronary syndrome (ACS) — ICD-10: I21.9 (pressure-like, radiation)
+5. Aortic dissection — ICD-10: I71.0 (tearing, maximal at onset, back radiation)
+6. Pulmonary embolism — ICD-10: I26.9 (pleuritic + dyspnea + risk factors)
+7. GERD/esophageal — ICD-10: K21.0 (burning, postprandial, improves with antacids)
+
+COMMON CLINICAL PATTERNS
+=========================
+
+SEPSIS PATTERN:
+Diagnosis: Infection + 2+ SIRS criteria
+- Temperature > 38°C or < 36°C
+- HR > 90 bpm
+- RR > 20 or PaCO2 < 32 mmHg
+- WBC > 12.0 or < 4.0 or > 10% bands
+ICD-10: A41.9 (sepsis, unspecified organism)
+Must order: Blood cultures x2, lactate, CBC, BMP, LFTs, coagulation studies
+
+SIRS without infection:
+- Pancreatitis, burn injury, trauma, post-surgical
+
+URINARY TRACT INFECTION (UTI) PATTERN:
+- Dysuria, frequency, urgency
+- UA: pyuria (> 5 WBCs/hpf), bacteriuria, nitrites positive
+- Fever + flank pain: suggests pyelonephritis (ICD-10: N10)
+- First-line treatment: TMP-SMX or nitrofurantoin (uncomplicated UTI)
+  Fluoroquinolones: reserved for complicated UTI, pyelonephritis
+
+TYPICAL PATIENT PRESENTATIONS:
+================================
+
+Presentation: 54-year-old male with fever, productive cough x 3 days, WBC 18.4
+Most likely diagnosis: Bacterial pneumonia (CAP) — ICD-10: J18.9
+Supporting: Age, male sex, WBC elevation, productive cough, fever
+Action: CXR, blood cultures, start empirical antibiotics
+
+Presentation: 70-year-old female with altered mental status, fever, increased respiratory rate
+Consider: CAP with sepsis (ICD-10: J18.9 + A41.9), UTI with sepsis, meningitis
+Note: In elderly, pneumonia may present as confusion without classic respiratory symptoms
+
+Presentation: Young adult with gradual onset bilateral infiltrates, mild fever, "walking pneumonia"
+Most likely: Atypical pneumonia — ICD-10: J15.7 (Mycoplasma pneumoniae)
+Treatment: Azithromycin (macrolide covers Mycoplasma); beta-lactams do NOT cover Mycoplasma
+
+Presentation: COPD patient with worsening dyspnea, increased purulent sputum
+Most likely: COPD exacerbation (ICD-10: J44.1) with or without pneumonia
+Additional organisms: H. influenzae, Moraxella catarrhalis (common in COPD)
+
+RISK STRATIFICATION TOOLS:
+===========================
+
+PSI (Pneumonia Severity Index) / PORT Score:
+Class I (age < 50, no comorbidities, normal vitals): Outpatient
+Class II-III (score < 70-90): Outpatient or brief observation
+Class IV-V (score 91-130, > 130): Hospitalization required
+
+CURB-65 (simpler tool):
+Score 0-1: Outpatient treatment
+Score 2: Short hospitalization or supervised outpatient
+Score 3-5: Hospitalization (score 4-5: consider ICU)
+
+Fine criteria for ICU admission:
+- Respiratory rate > 30 breaths/min
+- PaO2/FiO2 ratio < 250
+- Multilobar infiltrates
+- Confusion/disorientation
+- BUN > 20 mg/dL
+- WBC < 4.0 x10^3/uL
+- Platelet < 100
+- Core temperature < 36°C
+- Hypotension requiring IV fluids
+Minor criteria — 3+ = ICU; Major criteria: 1 = ICU

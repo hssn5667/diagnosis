@@ -1,0 +1,107 @@
+CLINICAL GUIDELINE: Community-Acquired Pneumonia (CAP)
+ICD-10: J18.9 - Pneumonia, unspecified organism
+
+DEFINITION:
+Community-acquired pneumonia (CAP) is an acute infection of the pulmonary parenchyma in a patient who has acquired the infection in the community. It is one of the most common infectious diseases encountered in clinical practice.
+
+DIAGNOSTIC CRITERIA:
+Diagnosis of CAP is based on the presence of select clinical features (e.g., cough, fever, sputum production, and pleuritic chest pain) and is supported by imaging of the lung, usually by chest radiography.
+
+KEY DIAGNOSTIC FEATURES:
+- Fever (temperature > 38°C / 100.4°F) — present in 70-80% of cases
+- Productive cough with purulent sputum
+- Pleuritic chest pain
+- Dyspnea (shortness of breath)
+- Decreased breath sounds or crackles on auscultation
+- Tachycardia (heart rate > 100 bpm)
+- Tachypnea (respiratory rate > 20 breaths/min)
+
+LABORATORY FINDINGS SUPPORTING CAP:
+- Leukocytosis: WBC > 11.0 x10^3/uL (WBC LOINC 26464-8)
+  - WBC > 15.0: strong indicator of bacterial pneumonia
+  - WBC > 18.0: may indicate severe pneumonia or early sepsis, order blood cultures
+- Elevated C-Reactive Protein (CRP LOINC 1988-5): > 10 mg/L
+- Elevated Procalcitonin: > 0.25 ng/mL indicates bacterial etiology
+- Neutrophilia: Neutrophils > 75% of differential (LOINC 770-8)
+- Left shift: Bands > 10%
+- Elevated ESR
+
+IMAGING CRITERIA:
+- Chest X-ray showing new lobar consolidation or interstitial infiltrates
+- Lobar consolidation: favors bacterial (Streptococcus pneumoniae) etiology
+- Bilateral interstitial infiltrates: may suggest atypical organisms (Mycoplasma, viral)
+- Right lower lobe: most common location for aspiration pneumonia
+
+ETIOLOGY AND COMMON ORGANISMS:
+Bacterial (most common):
+- Streptococcus pneumoniae (30-35% of cases) — most common bacterial cause
+- Haemophilus influenzae — common in COPD patients
+- Staphylococcus aureus — associated with influenza, more severe
+- Gram-negative organisms — Klebsiella pneumoniae in alcoholics
+- Legionella pneumophila — associated with water exposure, diarrhea, hyponatremia
+
+Atypical organisms:
+- Mycoplasma pneumoniae — walking pneumonia, younger patients, bilateral infiltrates
+- Chlamydophila pneumoniae — elderly, chronic bronchitis history
+- Legionella pneumophila — severe pneumonia, GI symptoms, hyponatremia
+
+SEVERITY ASSESSMENT (PORT/PSI Score and CURB-65):
+CURB-65 Score:
+- C: Confusion (new onset)
+- U: Urea > 7 mmol/L (BUN > 19.6 mg/dL)
+- R: Respiratory rate ≥ 30 breaths/min
+- B: Blood pressure (systolic < 90 or diastolic < 60 mmHg)
+- 65: Age ≥ 65 years
+
+CURB-65 0-1: Low severity, outpatient treatment
+CURB-65 2: Moderate severity, consider hospitalization
+CURB-65 3-5: High severity, hospitalization required, consider ICU for score 4-5
+
+TREATMENT GUIDELINES (ATS/IDSA 2019):
+Outpatient (no comorbidities):
+- Amoxicillin 1g PO TID x 5 days (first line for uncomplicated CAP)
+- Doxycycline 100mg PO BID x 5 days (alternative)
+- Azithromycin 500mg PO day 1, then 250mg PO days 2-5 (if macrolide susceptibility rates > 25%)
+
+Outpatient (comorbidities or risk for drug-resistant organisms):
+- Amoxicillin-clavulanate 875/125mg PO BID PLUS Azithromycin 500mg PO daily
+- Respiratory fluoroquinolone monotherapy (Levofloxacin 750mg PO daily OR Moxifloxacin 400mg PO daily)
+
+Inpatient (non-ICU):
+- Beta-lactam (Ampicillin-sulbactam OR Ceftriaxone 1-2g IV daily) PLUS Azithromycin 500mg IV/PO daily
+- OR Respiratory fluoroquinolone monotherapy
+
+Inpatient (ICU):
+- Beta-lactam PLUS Azithromycin OR Respiratory fluoroquinolone
+
+PENICILLIN ALLERGY ALTERNATIVES:
+- Non-severe allergy: Respiratory fluoroquinolone (Levofloxacin, Moxifloxacin)
+- Severe allergy (anaphylaxis): Azithromycin monotherapy for mild-moderate CAP; consult ID for severe CAP
+
+DRUG INTERACTIONS TO MONITOR:
+- Azithromycin + Warfarin: monitor INR closely — macrolides increase warfarin effect
+- Fluoroquinolones + Warfarin: significant interaction, increase INR monitoring
+- Azithromycin + QT-prolonging drugs: risk of arrhythmia
+
+COMPLICATIONS:
+- Parapneumonic effusion/empyema — requires pleural drainage if complicated
+- Sepsis — organ dysfunction, requires ICU care
+- Respiratory failure — may require mechanical ventilation
+- Lung abscess — prolonged course, may need surgical drainage
+
+FOLLOW-UP:
+- Clinical improvement expected in 3-5 days
+- Chest X-ray clearance may take 4-6 weeks
+- Follow-up X-ray at 6 weeks recommended for smokers and elderly (to exclude malignancy)
+
+ICD-10 RELATED CODES:
+J18.9 - Pneumonia, unspecified organism
+J18.1 - Lobar pneumonia, unspecified organism
+J18.0 - Bronchopneumonia, unspecified organism
+J15.9 - Unspecified bacterial pneumonia
+J15.7 - Pneumonia due to Mycoplasma pneumoniae
+J15.0 - Pneumonia due to Klebsiella pneumoniae
+J15.4 - Pneumonia due to other streptococci
+J12.9 - Viral pneumonia, unspecified
+J22 - Unspecified acute lower respiratory infection
+A41.9 - Sepsis, unspecified organism (when pneumonia causes sepsis)

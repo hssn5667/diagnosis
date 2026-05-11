@@ -1,0 +1,14 @@
+fastapi 
+uvicorn[standard]
+pydantic 
+pydantic-settings 
+httpx 
+asyncpg 
+langchain 
+langchain-google-genai 
+langchain-chroma 
+langchain-text-splitters 
+langgraph 
+langsmith 
+chromadb 
+python-dotenv

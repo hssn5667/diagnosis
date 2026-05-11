@@ -1,0 +1,118 @@
+CLINICAL REFERENCE: Drug Interactions and Contraindications
+
+ANTIBIOTIC DRUG INTERACTIONS
+==============================
+
+MACROLIDES (Azithromycin, Clarithromycin, Erythromycin)
+--------------------------------------------------------
+Azithromycin (Z-Pack):
+- Warfarin interaction: MODERATE — azithromycin inhibits gut flora, increases warfarin effect
+  Monitor INR closely; INR may rise by 20-50% within 3-5 days
+- QT-prolonging drugs: SEVERE — additive QT prolongation, risk of torsades de pointes
+  Avoid with: amiodarone, haloperidol, methadone, fluoroquinolones (if possible)
+- Metformin: MINOR — no significant interaction
+- Mechanism: weak CYP3A4 inhibitor (azithromycin less than clarithromycin)
+
+Clarithromycin:
+- Warfarin: MAJOR — significant CYP3A4 inhibition, can double INR
+- Statins (atorvastatin, simvastatin): MAJOR — rhabdomyolysis risk
+- Do not use with simvastatin/lovastatin
+
+FLUOROQUINOLONES (Levofloxacin, Moxifloxacin, Ciprofloxacin)
+--------------------------------------------------------------
+Levofloxacin / Moxifloxacin:
+- Warfarin: MODERATE-MAJOR — increases anticoagulant effect, monitor INR
+- QT prolongation: SIGNIFICANT — avoid in patients with baseline QT prolongation
+  Additive with: amiodarone, antipsychotics, antifungals
+- Antacids/iron/zinc: Reduce absorption by up to 80% — separate by 2 hours
+- NSAIDs: Increased risk of seizures
+
+BETA-LACTAMS (Penicillins, Cephalosporins)
+-------------------------------------------
+Amoxicillin / Amoxicillin-clavulanate:
+- Warfarin: MODERATE — alters gut flora, can increase INR
+- Metformin: MINOR — no significant interaction
+- Oral contraceptives: MINOR — theoretical decrease in efficacy
+
+ALLERGY CROSS-REACTIVITY
+=========================
+
+PENICILLIN ALLERGY:
+- Cross-reactivity with Amoxicillin: HIGH (~80-90%) — AVOID
+- Cross-reactivity with Ampicillin: HIGH (~80-90%) — AVOID
+- Cross-reactivity with Piperacillin: HIGH — AVOID
+- Cross-reactivity with Cephalosporins: LOW (~1-2%) — generally safe in non-anaphylactic allergy
+  Exception: Cefazolin (first-gen) — higher cross-reactivity, AVOID in severe penicillin allergy
+- Cross-reactivity with Carbapenems: VERY LOW (~0.5%) — generally safe
+- Cross-reactivity with Aztreonam: MINIMAL — safe to use
+- Azithromycin: NO cross-reactivity — SAFE in penicillin allergy
+- Fluoroquinolones: NO cross-reactivity — SAFE in penicillin allergy
+
+SULFA ALLERGY (Sulfonamides):
+- Cross-reactivity with TMP-SMX (Bactrim): HIGH — AVOID
+- Cross-reactivity with Furosemide: LOW (contains sulfonamide group, different structure)
+  Generally safe, use caution in severe sulfa allergy
+- Cross-reactivity with Thiazide diuretics: LOW — generally safe
+
+NSAID ALLERGY:
+- Cross-reactivity within NSAIDs: MODERATE — aspirin allergy may cross-react with ibuprofen
+- COX-2 inhibitors (celecoxib): generally safe in aspirin allergy
+
+CONTRAINDICATIONS BY CONDITION
+================================
+
+CHRONIC KIDNEY DISEASE (CKD) — ICD-10: N18.x
+- Metformin: CONTRAINDICATED in CKD stage 4-5 (GFR < 30) — lactic acidosis risk
+- NSAIDs: CONTRAINDICATED — worsen renal function, sodium retention
+- Aminoglycosides: AVOID — nephrotoxic, accumulate in CKD
+- Adjust: fluoroquinolones, beta-lactams, most antibiotics — dose adjustment required
+  Levofloxacin: reduce dose in CKD (GFR < 50)
+
+WARFARIN THERAPY — ICD-10: Z79.01
+- Check ALL new medications for CYP2C9 interactions
+- Major enhancers (increase INR): amiodarone, fluconazole, metronidazole, TMP-SMX, 
+  clarithromycin, most antibiotics (gut flora alteration)
+- Major reducers (decrease INR): rifampin, carbamazepine, barbiturates
+- Monitor INR within 3-5 days of any new antibiotic
+
+ATRIAL FIBRILLATION — ICD-10: I48.x
+- QT-prolonging drugs: CAUTION — already at risk for arrhythmia
+- Avoid: macrolides (if alternatives exist), fluoroquinolones with QT history
+
+TYPE 2 DIABETES — ICD-10: E11.x
+- Fluoroquinolones: CAUTION — can cause hypoglycemia or hyperglycemia, especially in patients on oral hypoglycemics
+- Monitor blood glucose closely if fluoroquinolone prescribed
+- Metformin + contrast dye: hold 48 hours before/after IV contrast
+
+LIVER DISEASE — ICD-10: K70-K77
+- Acetaminophen: REDUCE DOSE or AVOID in severe liver disease
+- Statins: use caution in active liver disease
+- Azithromycin: use caution in severe hepatic impairment
+
+MYASTHENIA GRAVIS — ICD-10: G70.x
+- Fluoroquinolones: CONTRAINDICATED — can exacerbate myasthenic symptoms
+- Aminoglycosides: CONTRAINDICATED — neuromuscular blockade
+
+SAFE ALTERNATIVES FOR COMMON CLINICAL SCENARIOS
+=================================================
+
+Scenario: CAP in patient with Penicillin allergy (anaphylaxis)
+- Recommended: Azithromycin 500mg PO/IV daily (no cross-reactivity)
+- Alternative: Levofloxacin 750mg PO/IV daily (no cross-reactivity)
+- Avoid: Amoxicillin, Ampicillin, Amoxicillin-clavulanate, Piperacillin-tazobactam
+
+Scenario: CAP in patient on Warfarin
+- Recommended: Azithromycin (moderate interaction — monitor INR in 3-5 days)
+- Alternative: Ceftriaxone (lower warfarin interaction than macrolides)
+- Requires: INR check within 48-72 hours of starting antibiotic
+
+Scenario: CAP in patient with CKD (Creatinine > 2.0)
+- Recommended: Azithromycin (minimal renal clearance — safe in CKD)
+- Alternative: Ceftriaxone (biliary elimination — safe in CKD)
+- Adjust dose: Levofloxacin if used (reduce to 500mg daily)
+- Avoid: Aminoglycosides, high-dose NSAIDs
+
+Scenario: CAP in diabetic patient
+- Safe: Most antibiotics at standard doses
+- Monitor: Blood glucose more frequently with fluoroquinolones
+- Metformin: Continue unless AKI develops or IV contrast required
