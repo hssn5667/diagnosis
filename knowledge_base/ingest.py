@@ -96,9 +96,9 @@ def get_chroma_client():
     try:
         client = chromadb.HttpClient(
             ssl=True,
-            host=CHROMADB_HOST,
+            host="api.trychroma.com",
             port=443,
-            headers={"x-chroma-token": CHROMA_API_KEY},
+            headers={"Authorization": f"Bearer {CHROMA_API_KEY}"},
             tenant=CHROMA_TENANT,
             database=CHROMA_DATABASE,
         )
