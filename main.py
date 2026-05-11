@@ -291,4 +291,167 @@ async def health() -> dict:
     }
 
 
+from fastapi import Request
+from fastapi.responses import JSONResponse
+
+
+@app.get("/.well-known/agent-card.json")
+async def agent_card(request: Request):
+    base_url = str(request.base_url).rstrip("/").replace("http://", "https://")
+    return JSONResponse({
+        "name": "MediTwin Diagnosis Agent",
+        "description": (
+            "RAG-based differential diagnosis agent for MediTwin AI. Accepts structured "
+            "PatientState (from Patient Context Agent) and a chief complaint, retrieves "
+            "relevant clinical guidelines from ChromaDB (medical_knowledge collection), "
+            "and returns a ranked differential diagnosis with ICD-10 codes, confidence "
+            "scores, FHIR Condition resources, and clinical safety flags (penicillin allergy, "
+            "sepsis, isolation). Includes in-memory TTL cache (5-min), LLM-only fallback "
+            "mode when ChromaDB is unavailable, and PostgreSQL persistence for all results."
+        ),
+        "version": "2.0.0",
+        "url": base_url,
+        "provider": {
+            "organization": "MediTwin AI",
+            "name": "Tayyab Hussain",
+            "url": "https://github.com/hssn5667/diagnosis-agent"
+        },
+        "supportedInterfaces": [
+            {
+                "url": f"{base_url}/diagnose",
+                "protocolBinding": "HTTP+JSON",
+                "protocolVersion": "2.0",
+                "description": "Blocking differential diagnosis — returns full DiagnosisOutput with ranked differentials, FHIR Conditions, and clinical safety flags."
+            },
+            {
+                "url": f"{base_url}/stream",
+                "protocolBinding": "HTTP+SSE",
+                "protocolVersion": "2.0",
+                "description": "SSE streaming diagnosis — emits status/progress/token/complete events in real time, including per-token LLM streaming."
+            },
+            {
+                "url": f"{base_url}/diagnose-batch",
+                "protocolBinding": "HTTP+JSON",
+                "protocolVersion": "2.0",
+                "description": "Batch diagnosis for up to 10 patients in a single request. Non-fatal per-item errors — failed items return error entries without aborting the batch."
+            }
+        ],
+        "capabilities": {
+            "streaming": True,
+            "pushNotifications": False,
+            "stateTransitionHistory": True,
+            "ragMode": True,
+            "fallbackMode": True,
+            "fhirOutput": True,
+            "inMemoryCache": True,
+            "batchProcessing": True
+        },
+        "defaultInputModes": ["application/json"],
+        "defaultOutputModes": ["application/json", "text/event-stream"],
+        "skills": [
+            {
+                "id": "differential_diagnosis",
+                "name": "Differential Diagnosis (RAG)",
+                "description": (
+                    "Runs a full RAG-based differential diagnosis pipeline: builds a structured "
+                    "patient query from PatientState, retrieves up to 6 relevant chunks from "
+                    "ChromaDB (medical_knowledge), and invokes Gemini via LangChain "
+                    "with_structured_output() to produce exactly 3–4 ranked diagnoses. Each "
+                    "diagnosis includes ICD-10 code, confidence score, clinical reasoning, and "
+                    "supporting evidence. Applies post-inference rule adjustments: penicillin "
+                    "allergy filter (removes contraindicated steps), sepsis flag, isolation flag, "
+                    "and confidence boost. Results are TTL-cached (5 min, 64 entries max) and "
+                    "persisted to PostgreSQL."
+                ),
+                "tags": ["rag", "chromadb", "gemini", "icd10", "differential-diagnosis", "fhir", "cache"],
+                "inputModes": ["application/json"],
+                "outputModes": ["application/json"]
+            },
+            {
+                "id": "stream_differential_diagnosis",
+                "name": "Stream Differential Diagnosis (SSE)",
+                "description": (
+                    "SSE streaming variant of differential_diagnosis. Emits ordered events: "
+                    "status (5 labelled steps), progress (RAG retrieval %, token count), "
+                    "token (per-token LLM output for live UI feedback), and a final complete "
+                    "event containing the full DiagnosisOutput with FHIR Conditions and a "
+                    "summary block. Includes cache-hit fast-path and graceful fallback to "
+                    "non-streaming LLM invocation if astream_events fails."
+                ),
+                "tags": ["sse", "streaming", "rag", "gemini", "real-time", "token-streaming"],
+                "inputModes": ["application/json"],
+                "outputModes": ["text/event-stream"]
+            },
+            {
+                "id": "batch_diagnosis",
+                "name": "Batch Differential Diagnosis",
+                "description": (
+                    "Runs differential diagnosis sequentially for up to 10 patients in a single "
+                    "HTTP request. Each item follows the same pipeline as differential_diagnosis. "
+                    "Per-item failures return an error entry without aborting the batch, making "
+                    "it safe for orchestrator use across heterogeneous patient profiles."
+                ),
+                "tags": ["batch", "orchestrator", "multi-patient"],
+                "inputModes": ["application/json"],
+                "outputModes": ["application/json"]
+            },
+            {
+                "id": "get_diagnosis_history",
+                "name": "Get Patient Diagnosis History",
+                "description": (
+                    "Returns paginated diagnosis records for a patient from PostgreSQL, newest "
+                    "first. Each record includes top diagnosis, ICD-10 code, confidence, RAG mode "
+                    "(rag/fallback), differential list, recommended next steps, FHIR Conditions, "
+                    "clinical safety flags, cache hit status, elapsed time, and source endpoint "
+                    "(diagnose/stream). Supports limit/offset pagination."
+                ),
+                "tags": ["history", "audit", "patient", "postgresql", "pagination"],
+                "inputModes": ["application/json"],
+                "outputModes": ["application/json"]
+            },
+            {
+                "id": "get_diagnosis_stats",
+                "name": "Get Patient Diagnosis Stats",
+                "description": (
+                    "Returns aggregate statistics across all diagnosis sessions for a patient: "
+                    "total diagnoses, unique chief complaints, top 5 conditions by frequency "
+                    "(ICD-10 + display + count), sepsis/penicillin/isolation alert counts, "
+                    "RAG vs fallback mode breakdown, diagnose vs stream source breakdown, "
+                    "and first/latest session timestamps."
+                ),
+                "tags": ["stats", "analytics", "patient", "postgresql", "alerts"],
+                "inputModes": ["application/json"],
+                "outputModes": ["application/json"]
+            },
+            {
+                "id": "clear_diagnosis_cache",
+                "name": "Clear Diagnosis Cache",
+                "description": (
+                    "Admin endpoint that clears the in-memory TTL cache for all patients, "
+                    "forcing subsequent requests to re-run the full RAG pipeline. "
+                    "Requires X-Internal-Token header. Returns count of evicted entries."
+                ),
+                "tags": ["cache", "admin", "invalidation"],
+                "inputModes": ["application/json"],
+                "outputModes": ["application/json"]
+            }
+        ],
+        "ragConfig": {
+            "vectorStore": "ChromaDB Cloud",
+            "collection": "medical_knowledge",
+            "embeddingModel": "models/gemini-embedding-001",
+            "chunkSize": 512,
+            "chunkOverlap": 64,
+            "retrievalK": 6,
+            "fallbackMode": "LLM-only (no retrieval)"
+        },
+        "llmConfig": {
+            "provider": "Google Gemini",
+            "invocationPattern": "LangChain with_structured_output()",
+            "streamingPattern": "astream_events v2 (on_chat_model_stream)",
+            "outputSchema": "DiagnosisOutput (Pydantic v2)",
+            "icd10Repair": True
+        }
+    })
+
 COLLECTION_NAME = "medical_knowledge"
